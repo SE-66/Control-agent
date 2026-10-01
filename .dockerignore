@@ -1,0 +1,8 @@
+.git
+node_modules
+**/node_modules
+.wrangler
+**/.wrangler
+__pycache__
+**/__pycache__
+*.pyc
