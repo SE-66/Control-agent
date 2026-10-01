@@ -4,10 +4,9 @@
   "type": "module",
   "packageManager": "yarn@4.9.2",
   "scripts": {
-    "build": "node generate-static.mjs",
     "deploy": "wrangler deploy",
     "version": "wrangler versions upload",
-    "dev": "yarn build && wrangler dev"
+    "dev": "wrangler dev"
   },
   "devDependencies": {
     "wrangler": "^4.145.0"
