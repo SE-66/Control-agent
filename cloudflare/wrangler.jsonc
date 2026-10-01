@@ -12,10 +12,6 @@
     {
       "tag": "v1",
       "new_sqlite_classes": ["ControlAgentContainer"]
-    },
-    {
-      "tag": "v2",
-      "deleted_classes": ["ControlAgentContainer"]
     }
   ]
 }
