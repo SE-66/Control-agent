@@ -36,7 +36,7 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/health") {
-      return json({ ok: true, service: "control-agent" });
+      return json({ ok: true, service: "control-agent", app_access_token_configured: Boolean(env.APP_ACCESS_TOKEN), openai_api_key_configured: Boolean(env.OPENAI_API_KEY) });
     }
 
     if (url.pathname === "/api/chat") {
@@ -45,7 +45,7 @@ export default {
       }
 
       const auth = request.headers.get("authorization") ?? "";
-      const expected = env.APP_ACCESS_TOKEN ? `Bearer ${env.APP_ACCESS_TOKEN}` : "";
+      const expected = env.APP_ACCESS_TOKEN ? `Bearer ${env.APP_ACCESS_TOKEN.trim()}` : "";
       if (!expected || auth !== expected) {
         return json({ error: "Unauthorized" }, 401);
       }
