@@ -11,4 +11,4 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-exec node /opt/cloudflare/server.mjs
+exec node /opt/control-agent/cloudflare/server.mjs
