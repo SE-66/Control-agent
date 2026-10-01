@@ -35,6 +35,7 @@ token.value=sessionStorage.getItem("controlAgentToken")||"";
 save.onclick=()=>{sessionStorage.setItem("controlAgentToken",token.value.trim());statusEl.textContent="Access token saved for this browser session";};
 function add(role,text){const d=document.createElement("div");d.className="msg "+role;d.textContent=text;messages.appendChild(d);messages.scrollTop=messages.scrollHeight;}
 async function go(){
+  if(send.disabled)return;
   const message=input.value.trim(); if(!message)return;
   const access=token.value.trim(); if(!access){add("assistant","Enter the app access token first.");return;}
   add("user",message); input.value=""; send.disabled=true; statusEl.textContent="Thinking…";

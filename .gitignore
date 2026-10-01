@@ -5,6 +5,8 @@
 .env.development
 .env.test
 .env.production
+cloudflare/.dev.vars
+cloudflare/.wrangler/
 
 # API keys and secrets
 *.key
