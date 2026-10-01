@@ -1,3 +1,5 @@
+export class ControlAgentContainer {}
+
 interface Env {
   ASSETS: Fetcher;
   OPENAI_API_KEY: string;
