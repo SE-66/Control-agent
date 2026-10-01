@@ -4,12 +4,14 @@
   "type": "module",
   "scripts": {
     "deploy": "wrangler deploy",
+    "preview": "wrangler preview",
+    "version": "wrangler versions upload",
     "dev": "wrangler dev"
   },
   "dependencies": {
-    "@cloudflare/containers": "^0.0.31"
+    "@cloudflare/containers": "^0.3.7"
   },
   "devDependencies": {
-    "wrangler": "^4.41.0"
+    "wrangler": "^4.145.0"
   }
 }
