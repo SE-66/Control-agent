@@ -1,20 +1,11 @@
-# Cloudflare Containers deployment
+# Cloudflare Workers deployment (no Containers required)
 
-This directory deploys Control-agent's existing ECC capabilities dashboard behind a Cloudflare Worker and Container.
+This deployment uses Cloudflare Workers Static Assets and does not use Cloudflare Containers.
 
-## Requirements
+Cloudflare dashboard settings:
+- Root directory: `/cloudflare`
+- Build command: `yarn build`
+- Deploy command: `npx wrangler deploy`
+- Version command: `npx wrangler versions upload`
 
-- Cloudflare account with Containers access
-- Docker available where Wrangler performs the deployment
-- Node.js 18+
-
-## Deploy
-
-```bash
-cd cloudflare
-npm install
-npx wrangler login
-npm run deploy
-```
-
-The Worker routes requests to a single Cloudflare Container. The container runs the repository's existing dashboard on loopback and exposes it through an internal proxy on port 8080.
+This hosts a generated dashboard/catalog. It does not run shell commands, Claude Code, Codex, hooks, or a persistent agent runtime.
