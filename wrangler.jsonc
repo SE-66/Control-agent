@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "control-agent",
+  "main": "cloudflare/src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./cloudflare/public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["ControlAgentContainer"]
+    }
+  ]
+}
