@@ -11,6 +11,8 @@ Cloudflare dashboard settings:
 
 Use the pinned Yarn version in `package.json`. The committed lockfile fixes the Wrangler and runtime dependency versions used by builds.
 
+After reconnecting the Git integration, a new push to `main` should create a build. Check the Cloudflare Builds tab for the new commit; reconnecting alone may not build an existing commit.
+
 For a repository-root Deploy Hook, install in `cloudflare` and invoke its Wrangler binary with the root config:
 
 ```sh
